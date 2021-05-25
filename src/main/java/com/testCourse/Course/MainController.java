@@ -38,6 +38,10 @@ public class MainController {
 
     }
 
+    @GetMapping("/")
+    public String salute(){
+        return "Greetings";
+    }
     @GetMapping("/listCars")
     public String cars() {
         return carBDService.getAllCars().toString();
