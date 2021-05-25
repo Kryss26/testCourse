@@ -40,7 +40,20 @@ public class MainController {
 
     @GetMapping("/")
     public String salute(){
-        return "Greetings";
+        return "Greetings"+
+                "<br>"+
+                "Here are the instructions to use this Web Application"+
+                "<br>"+
+                "/count/{word} -> Counts consonants and vocals, {word} is a parameter to type"+
+                "<br>"+
+                "/listCars -> Show a list of the cars inserted"+
+                "<br>"+
+                "/{text} -> Encrypts a message, {text} is a parameter to type"
+                +"<br>"+
+                "/translate/{phrase} -> Translate in English a {phrase} inserted in Spanish"
+                +"<br>"+
+                "/CarFormulary -> Will lead you to a formulary for insert data into the database"
+        ;
     }
     @GetMapping("/listCars")
     public String cars() {
